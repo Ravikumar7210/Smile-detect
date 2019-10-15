@@ -1,5 +1,6 @@
 import cv2
 import os
+import matplotlib
 def find_faces(image_path):
     image =cv2.imread(image_path)
     color_img =image.copy()
