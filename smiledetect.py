@@ -9,7 +9,7 @@ def find_faces(image_path):
     haar_classifier =cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
     smile_cascade =cv2.CascadeClassifier('haarcascade_smile.xml')
     faces=haar_classifier.detectMultiScale(gray_img,scaleFactor=1.1,minNeighbors=5)
-    print('Number of faces found: {faces}'.format(faces=len(faces)))
+    print('faces found: {faces}'.format(faces=len(faces)))
     for(x,y,width,height) in faces:
         cv2.rectangle(color_img,(x,y),(x+width,y+height),(0,255,0),2)
         roi_gray =gray_img[y:y+height,x:x+width]
